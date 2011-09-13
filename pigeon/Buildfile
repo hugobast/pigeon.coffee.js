@@ -1,0 +1,23 @@
+# ==========================================================================
+# Project:   Pigeon
+# Copyright: @2011 Hugo Bastien
+# ==========================================================================
+
+# This is your Buildfile, which sets build settings for your project.
+# For example, this tells SproutCore's build tools that your requires
+# the SproutCore framework.
+
+begin
+  gem "sproutcore-coffeescript", "~> 0.1.5"
+  require "sproutcore-coffeescript"
+rescue LoadError
+  puts "sproutcore-coffeescript not installed, please run:\n\n  gem install sproutcore-coffeescript\n\n"
+  exit
+end
+
+config :all, :required => [:sproutcore, :upload]
+proxy "/posts", :to => "0.0.0.0:3000"
+proxy "/images", :to => "0.0.0.0:3000"
+
+# In addition to this Buildfile, which gives settings for your entire project,
+# each of your apps has its own Buildfile with settings specific to that app.

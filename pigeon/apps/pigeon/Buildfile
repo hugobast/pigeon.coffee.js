@@ -1,0 +1,17 @@
+# ==========================================================================
+# Project:   Pigeon
+# Copyright: @2011 Hugo Bastien
+# ==========================================================================
+
+# This is your Buildfile for your app, Pigeon. This tells SproutCore
+# how to build your app. These settings override those in your project
+# Buildfile, which contains default settings for all apps in your project.
+#
+# This line tells SproutCore's CSS preprocessor what class names to target.
+# Since your app has a theme named 'pigeon', and it is based on SproutCore's
+# Ace theme (named 'ace'), it is set to 'ace.pigeon'.
+
+require "coffee-script"
+require "sproutcore-coffeescript"
+
+config :pigeon, :css_theme => 'ace.pigeon'

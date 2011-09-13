@@ -1,0 +1,6 @@
+$theme.collection {
+  .sel {
+    background: -webkit-linear-gradient(top, #45484d 0%,#000000 100%) !important;
+  }
+}
+
